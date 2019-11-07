@@ -44,6 +44,17 @@ I found this screenshot of the Todoist app (<https://todoist.com>) that will act
 
 Have Node.js installed (I have v13.0.1).
 
-## Quickstart
+### API
 
+```cmd
+cd .\src\api\
+npm install
+```
 
+## Quick start
+
+### API
+
+```cmd
+node .\src\api\bin\www
+```
