@@ -58,3 +58,15 @@ npm install
 ```cmd
 node .\src\api\bin\www
 ```
+
+## Resources
+
+<https://expressjs.com/>
+<https://dev.to/beznet/build-a-rest-api-with-node-express-mongodb-4ho4>
+
+### Install, setup and use Swagger
+
+<https://www.npmjs.com/package/swagger-jsdoc>
+<https://www.npmjs.com/package/swagger-ui-express>
+<https://github.com/Surnet/swagger-jsdoc/blob/master/docs/GETTING-STARTED.md>
+
