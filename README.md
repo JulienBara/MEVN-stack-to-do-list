@@ -16,7 +16,7 @@ I found this screenshot of the Todoist app (<https://todoist.com>) that will act
 
 - [x] Readme  
 - [ ] API
-  - [ ] Exist
+  - [x] Exist
   - [ ] Create to-do item
   - [ ] Read to-do items list
   - [ ] Update to-do item label
@@ -39,3 +39,11 @@ I found this screenshot of the Todoist app (<https://todoist.com>) that will act
   - [ ] Containerized on Docker
   - [ ] Search/Filter field
   - [ ] Add folders (like in the screenshot)
+
+## Installation
+
+Have Node.js installed (I have v13.0.1).
+
+## Quickstart
+
+
