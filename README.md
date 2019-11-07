@@ -42,7 +42,8 @@ I found this screenshot of the Todoist app (<https://todoist.com>) that will act
 
 ## Installation
 
-Have Node.js installed (I have v13.0.1).
+Have Node.js installed (tested with v13.0.1).
+Have MongoDB installed (tested with v4.2.1).
 
 ### API
 
@@ -56,7 +57,17 @@ npm install
 ### API
 
 ```cmd
-node .\src\api\bin\www
+cd .\src\api\
+npm run start
+```
+
+## Quick start dev env
+
+### API
+
+```cmd
+cd .\src\api\
+npm run devStart
 ```
 
 ## Resources
