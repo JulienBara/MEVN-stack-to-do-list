@@ -3,6 +3,7 @@ const router = express.Router()
 
 // Get all to do items
 router.get('/', (req, res) => {
+    res.send("Hello World!")
 })
 
 // Create one to do item
