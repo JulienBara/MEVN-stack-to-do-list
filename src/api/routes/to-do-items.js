@@ -92,8 +92,51 @@ router.post('/', async (req, res) => {
 router.patch('/:id', (req, res) => {
 })
 
-// Delete one to do item
-router.delete('/:id', (req, res) => {
+/**
+ * @swagger
+ *
+ * /to-do-items:
+ *   delete:
+ *     description: Delete one to do item
+ *     tags:
+ *        - to-do-items
+ *     parameters:
+ *        - in: path
+ *          name: id
+ *          schema:
+ *            type: integer
+ *          required: true
+ *     responses:
+ *       200:
+ *        content:
+ *          application/json:
+ *            schema:
+ *              type: object
+ *              properties:
+ *                message:
+ *                  type: string
+ */
+router.delete('/:id', getToDoItem, async (req, res) => {
+  try {
+    await res.toDoItem.remove()
+    res.json({ message: 'Deleted this to do item' })
+  } catch(err) {
+    res.status(500).json({ message: err.message })
+  }
 })
+
+async function getToDoItem(req, res, next) {
+  try {
+    toDoItem = await ToDoItem.findById(req.params.id)
+    if (toDoItem == null) {
+      return res.status(404).json({ message: 'Cant find to do item'})
+    }
+  } catch(err){
+    return res.status(500).json({ message: err.message })
+  }
+
+  res.toDoItem = toDoItem
+  next()
+}
 
 module.exports = router

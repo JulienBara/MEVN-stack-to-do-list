@@ -21,7 +21,7 @@ I found this screenshot of the Todoist app (<https://todoist.com>) that will act
   - [x] Read to-do items list
   - [ ] Update to-do item label
   - [ ] Update to-do item status
-  - [ ] Delete to-do item
+  - [x] Delete to-do item
   - [ ] Reorder to-do item
 - [ ] Web client
   - [ ] Exist
