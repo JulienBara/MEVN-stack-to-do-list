@@ -42,7 +42,7 @@ I found this screenshot of the Todoist app (<https://todoist.com>) that will act
 
 ## Installation
 
-Have Node.js installed (tested with v13.0.1).
+Have Node.js installed (tested with v13.0.1).  
 Have MongoDB installed (tested with v4.2.1).
 
 ### API
@@ -72,12 +72,12 @@ npm run devStart
 
 ## Resources
 
-<https://expressjs.com/>
+<https://expressjs.com/>  
 <https://dev.to/beznet/build-a-rest-api-with-node-express-mongodb-4ho4>
 
 ### Install, setup and use Swagger
 
-<https://www.npmjs.com/package/swagger-jsdoc>
-<https://www.npmjs.com/package/swagger-ui-express>
+<https://www.npmjs.com/package/swagger-jsdoc>  
+<https://www.npmjs.com/package/swagger-ui-express>  
 <https://github.com/Surnet/swagger-jsdoc/blob/master/docs/GETTING-STARTED.md>
 

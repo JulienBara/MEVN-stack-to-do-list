@@ -34,7 +34,7 @@ const options = {
     openapi: '3.0.0',
     info: {
       title: 'To do items API',
-      version: '1.0.0', 
+      version: '1.0.0',
     },
   },
   apis: ['./routes/to-do-items.js'],
@@ -55,9 +55,7 @@ app.use(function(err, req, res, next) {
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+  res.status(err.status || 500).json({ message: err.message });
 });
 
 module.exports = app;
