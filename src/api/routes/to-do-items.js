@@ -62,18 +62,15 @@ router.get('/', async (req, res) => {
  *     description: Create one to do item
  *     tags:
  *       - to-do-items
- *     produces:
- *       - application/json
- *     parameters:
- *       - name: to do item
- *         description: ToDoItem object
- *         in:  body
- *         required: true
- *         type: string
- *         schema:
- *           $ref: '#/definitions/NewToDoItem'
+ *     requestBody:
+ *        description: ToDoItem object
+ *        required: true
+ *        content:
+ *          application/json:
+ *            schema:
+ *              $ref: '#/definitions/NewToDoItem'
  *     responses:
- *       200:
+ *       201:
  *         description: to do item
  *         schema:
  *           $ref: '#/definitions/ToDoItem'
