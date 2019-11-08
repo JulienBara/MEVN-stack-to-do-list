@@ -11,4 +11,23 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/to-do-items/5dc58422c333953f08ffffd3
+PATCH http://localhost:3000/to-do-items/5dc5844b667a8d36400867d2
+Content-Type: application/json
+
+{
+  "label": "Test2"
+}
+
+###
+
+PATCH http://localhost:3000/to-do-items/5dc5844b667a8d36400867d2
+Content-Type: application/json
+
+{
+  "isDone": true
+}
+
+
+###
+
+DELETE http://localhost:3000/to-do-items/5dc5844b667a8d36400867d2

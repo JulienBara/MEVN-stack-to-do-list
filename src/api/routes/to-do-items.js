@@ -88,8 +88,40 @@ router.post('/', async (req, res) => {
   }
 })
 
-// Update one to do item
-router.patch('/:id', (req, res) => {
+/**
+ * @swagger
+ *
+ * /to-do-items:
+ *   patch:
+ *     description: Update one to do item
+ *     tags:
+ *       - to-do-items
+ *     requestBody:
+ *        description: ToDoItem object
+ *        required: true
+ *        content:
+ *          application/json:
+ *            schema:
+ *              $ref: '#/definitions/ToDoItem'
+ *     responses:
+ *       200:
+ *         description: to do item
+ *         schema:
+ *           $ref: '#/definitions/ToDoItem'
+ */
+router.patch('/:id', getToDoItem, async (req, res) => {
+  if (req.body.label != null) {
+    res.toDoItem.label = req.body.label
+  }
+  if (req.body.isDone != null) {
+    res.toDoItem.isDone = req.body.isDone
+  }
+  try {
+    const updatedToDoItem = await res.toDoItem.save()
+    res.json(updatedToDoItem)
+  } catch {
+    res.status(400).json({ message: err.message })
+  }
 })
 
 /**

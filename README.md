@@ -19,10 +19,11 @@ I found this screenshot of the Todoist app (<https://todoist.com>) that will act
   - [x] Exist
   - [x] Create to-do item
   - [x] Read to-do items list
-  - [ ] Update to-do item label
-  - [ ] Update to-do item status
+  - [x] Update to-do item label
+  - [x] Update to-do item status
   - [x] Delete to-do item
   - [ ] Reorder to-do item
+  - [ ] Swagger support
 - [ ] Web client
   - [ ] Exist
   - [ ] Create to-do item
