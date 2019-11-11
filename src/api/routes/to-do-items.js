@@ -14,6 +14,13 @@ const ToDoItem = require('../models/to-do-item')
  *     properties:
  *       label:
  *         type: string
+ *   UpdateToDoItem:
+ *     type: object
+ *     properties:
+ *       label:
+ *         type: string
+ *       isDone:
+ *         type: boolean
  *   ToDoItem:
  *      allOf:
  *        - $ref: '#/components/schemas/NewToDoItem'
@@ -98,23 +105,31 @@ router.post('/', async (req, res) => {
 /**
  * @swagger
  *
- * /to-do-items:
+ * /to-do-items/{id}:
  *   patch:
  *     description: Update one to do item
  *     tags:
  *       - to-do-items
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *            type: string
+ *         required: true
  *     requestBody:
  *        description: ToDoItem object
  *        required: true
  *        content:
  *          application/json:
  *            schema:
- *              $ref: '#/components/schemas/ToDoItem'
+ *              $ref: '#/components/schemas/UpdateToDoItem'
  *     responses:
  *       200:
  *         description: to do item
- *         schema:
- *           $ref: '#/components/schemas/ToDoItem'
+ *         content:
+ *            application/json:
+ *              schema:
+ *                $ref: '#/components/schemas/ToDoItem'
  */
 router.patch('/:id', getToDoItem, async (req, res) => {
   if (req.body.label != null) {
@@ -134,7 +149,7 @@ router.patch('/:id', getToDoItem, async (req, res) => {
 /**
  * @swagger
  *
- * /to-do-items:
+ * /to-do-items/{id}:
  *   delete:
  *     description: Delete one to do item
  *     tags:
@@ -143,7 +158,7 @@ router.patch('/:id', getToDoItem, async (req, res) => {
  *        - in: path
  *          name: id
  *          schema:
- *            type: integer
+ *            type: string
  *          required: true
  *     responses:
  *       200:
