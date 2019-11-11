@@ -1,6 +1,6 @@
 <template>
   <v-app id="inspire">
-    <v-navigation-drawer
+    <!-- <v-navigation-drawer
       v-model="drawer"
       app
     >
@@ -22,15 +22,15 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
-    </v-navigation-drawer>
+    </v-navigation-drawer> -->
 
     <v-app-bar
       app
-      color="indigo"
+      color="red"
       dark
     >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title>Application</v-toolbar-title>
+      <!-- <v-app-bar-nav-icon @click.stop="drawer = !drawer" /> -->
+      <v-toolbar-title>To-do list</v-toolbar-title>
     </v-app-bar>
 
     <v-content>
@@ -77,10 +77,10 @@
       </v-container>
     </v-content>
     <v-footer
-      color="indigo"
+      color="red"
       app
     >
-      <span class="white--text">&copy; 2019</span>
+      <span class="white--text">JulienBara&copy; 2019</span>
     </v-footer>
   </v-app>
 </template>
