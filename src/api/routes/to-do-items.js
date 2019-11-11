@@ -5,7 +5,8 @@ const ToDoItem = require('../models/to-do-item')
 /**
  * @swagger
  *
- * definitions:
+ * components:
+ *  schemas:
  *   NewToDoItem:
  *     type: object
  *     required:
@@ -14,17 +15,19 @@ const ToDoItem = require('../models/to-do-item')
  *       label:
  *         type: string
  *   ToDoItem:
- *     allOf:
- *       - $ref: '#/definitions/NewToDoItem'
- *       - required:
- *         - id
- *         - isDone
- *       - properties:
- *         id:
- *           type: integer
- *           format: int64
- *         isDone:
- *           type: boolean
+ *      allOf:
+ *        - $ref: '#/components/schemas/NewToDoItem'
+ *        - type: object
+ *          properties:
+ *            _id:
+ *              type: string
+ *            isDone:
+ *              type: boolean
+ *            createdDate:
+ *              type: string
+ *              format: date-time
+ *            __v:
+ *              type: integer
  */
 
 /**
@@ -40,10 +43,12 @@ const ToDoItem = require('../models/to-do-item')
  *     responses:
  *       200:
  *         description: to do items
- *         schema:
- *            type: array
- *            items:
- *              $ref: '#/definitions/ToDoItem'
+ *         content:
+ *            application/json:
+ *              schema:
+ *                type: array
+ *                items:
+ *                  $ref: '#/components/schemas/ToDoItem'
  */
 router.get('/', async (req, res) => {
   try {
@@ -68,12 +73,14 @@ router.get('/', async (req, res) => {
  *        content:
  *          application/json:
  *            schema:
- *              $ref: '#/definitions/NewToDoItem'
+ *              $ref: '#/components/schemas/NewToDoItem'
  *     responses:
  *       201:
  *         description: to do item
- *         schema:
- *           $ref: '#/definitions/ToDoItem'
+ *         content:
+ *            application/json:
+ *              schema:
+ *                $ref: '#/components/schemas/ToDoItem'
  */
 router.post('/', async (req, res) => {
   const toDoItem = new ToDoItem({
@@ -102,12 +109,12 @@ router.post('/', async (req, res) => {
  *        content:
  *          application/json:
  *            schema:
- *              $ref: '#/definitions/ToDoItem'
+ *              $ref: '#/components/schemas/ToDoItem'
  *     responses:
  *       200:
  *         description: to do item
  *         schema:
- *           $ref: '#/definitions/ToDoItem'
+ *           $ref: '#/components/schemas/ToDoItem'
  */
 router.patch('/:id', getToDoItem, async (req, res) => {
   if (req.body.label != null) {

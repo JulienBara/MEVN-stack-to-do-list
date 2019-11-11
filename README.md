@@ -81,3 +81,4 @@ npm run devStart
 <https://www.npmjs.com/package/swagger-jsdoc>
 <https://www.npmjs.com/package/swagger-ui-express>
 <https://github.com/Surnet/swagger-jsdoc/blob/master/docs/GETTING-STARTED.md>
+<https://swagger.io/docs/specification/about/>
