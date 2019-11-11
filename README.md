@@ -23,9 +23,9 @@ I found this screenshot of the Todoist app (<https://todoist.com>) that will act
   - [x] Update to-do item status
   - [x] Delete to-do item
   - [ ] Reorder to-do item
-  - [ ] Swagger support
+  - [x] Swagger support
 - [ ] Web client
-  - [ ] Exist
+  - [x] Exist
   - [ ] Create to-do item
   - [ ] Read to-do items list
   - [ ] Update to-do item label
@@ -45,11 +45,19 @@ I found this screenshot of the Todoist app (<https://todoist.com>) that will act
 
 Have Node.js installed (tested with v13.0.1).
 Have MongoDB installed (tested with v4.2.1).
+Have Vue CLI globally installed (tested with v4.0.5) (`npm install -g @vue/cli`)
 
 ### API
 
 ```cmd
 cd .\src\api\
+npm install
+```
+
+### App
+
+```cmd
+cd .\src\app\
 npm install
 ```
 
@@ -60,6 +68,13 @@ npm install
 ```cmd
 cd .\src\api\
 npm run start
+```
+
+### App
+
+```cmd
+cd .\src\app\
+npm run serve
 ```
 
 ## Quick start dev env
