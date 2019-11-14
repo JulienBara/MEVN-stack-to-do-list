@@ -27,7 +27,7 @@ I found this screenshot of the Todoist app (<https://todoist.com>) that will act
 - [ ] Web client
   - [x] Exist
   - [ ] Create to-do item
-  - [ ] Read to-do items list
+  - [x] Read to-do items list
   - [ ] Update to-do item label
   - [ ] Update to-do item status
   - [ ] Delete to-do item
