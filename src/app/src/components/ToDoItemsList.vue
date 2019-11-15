@@ -1,10 +1,15 @@
 <template>
   <v-container>
-    <ToDoItem
-      v-for="item in toDoItemsList"
-      :key="item._id"
-      :item="item"
-    />
+    <v-col
+      sm="4"
+      offset-sm="4"
+    >
+      <ToDoItem
+        v-for="item in toDoItemsList"
+        :key="item._id"
+        :item="item"
+      />
+    </v-col>
   </v-container>
 </template>
 

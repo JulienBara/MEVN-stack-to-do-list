@@ -1,16 +1,10 @@
 <template>
   <v-row>
-    <v-col
-      sm="4"
-      offset-sm="4"
-    >
-      <v-row>
-        <v-checkbox
-          v-model="item.isDone"
-          :label="item.label"
-        />
-      </v-row>
-    </v-col>
+    <v-checkbox
+      v-model="item.isDone"
+      dense
+      :label="item.label"
+    />
   </v-row>
 </template>
 
@@ -21,3 +15,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+  .v-input {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+</style>
