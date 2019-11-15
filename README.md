@@ -29,7 +29,7 @@ I found this screenshot of the Todoist app (<https://todoist.com>) that will act
   - [ ] Create to-do item
   - [x] Read to-do items list
   - [ ] Update to-do item label
-  - [ ] Update to-do item status
+  - [x] Update to-do item status
   - [ ] Delete to-do item
   - [ ] Reorder to-do item with drag and drop
 - Bonus
