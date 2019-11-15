@@ -9,7 +9,7 @@
     </v-app-bar>
 
     <v-content>
-      <ToDoItemsList/>
+      <ToDoItemsList />
     </v-content>
 
     <v-footer
@@ -29,7 +29,7 @@ export default {
     ToDoItemsList,
   },
   props: {
-    source: String,
+    source: { type: String, default: '' },
   },
 
   data: () => ({

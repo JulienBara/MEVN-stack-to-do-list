@@ -1,16 +1,23 @@
 <template>
-  <v-row
-    align="center"
-    justify="center">
-    <v-checkbox
-      v-model="item.isDone"
-    ></v-checkbox>
-    <div>{{item.label}}</div>
+  <v-row>
+    <v-col
+      sm="4"
+      offset-sm="4"
+    >
+      <v-row>
+        <v-checkbox
+          v-model="item.isDone"
+          :label="item.label"
+        />
+      </v-row>
+    </v-col>
   </v-row>
 </template>
 
 <script>
 export default {
-  props: ['item'],
+  props: {
+    item: { type: Object, required: true },
+  },
 };
 </script>

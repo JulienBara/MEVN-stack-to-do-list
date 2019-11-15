@@ -1,6 +1,10 @@
 <template>
   <v-container>
-    <ToDoItem v-for="item in toDoItemsList" :key="item._id" :item="item"/>
+    <ToDoItem
+      v-for="item in toDoItemsList"
+      :key="item._id"
+      :item="item"
+    />
   </v-container>
 </template>
 
